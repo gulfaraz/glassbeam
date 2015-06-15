@@ -1,0 +1,18 @@
+<section>
+        <p>{{message}}</p>
+        <button ng-click="transpose_table()">Transpose</button>
+        <table>
+            <thead>
+                <tr>
+                    <td>Table Data</td>
+                    <td ng-repeat="column in (orientation ? columns : rows)">{{column.name}}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in (orientation ? rows : columns)">
+                    <td>{{row.name}}</td>
+                    <td ng-repeat="column in (orientation ? rows : columns)">{{ orientation ? get_value(row.id, column.id) : get_value(column.id, row.id) }}</td>
+                </tr>
+            </tbody>
+        </table>
+</section>

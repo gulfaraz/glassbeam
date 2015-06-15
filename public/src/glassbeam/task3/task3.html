@@ -1,0 +1,24 @@
+<section>
+    <header><h2>Task 3</h2></header>
+    <section>
+        <header><h3>Data Set</h3></header>
+        <div class="data_set">
+            <div ng-repeat="record in data_set" ng-mouseover="record.show_controls = true" ng-mouseleave="record.show_controls = false">
+                <span ng-hide="record.edit">
+                    <span ng-init="record.original.name=record.name">{{record.name}}</span>
+                    <span ng-init="record.original.description=record.description">{{record.description}}</span>
+                </span>
+                <span ng-show="record.edit">
+                    <input type="text" ng-model="record.name" value="{{record.name}}" />
+                    <input type="text" ng-model="record.description" value="{{record.description}}" />
+                </span>
+                <span ng-show="record.show_controls">
+                    <button type="button" ng-click="record.edit = !record.edit">{{ record.edit ? 'Done' : 'Edit'}}</button>
+                    <button type="button" ng-click="$parent.data_set[$index]=record.original">Undo</button>
+                    <button type="button" ng-click="$parent.data_set.splice($index, 1)">Delete</button>
+                </span>
+            </div>
+        </div>
+        <button type="button" ng-click="save()">Save</button>
+    </section>
+</section>
