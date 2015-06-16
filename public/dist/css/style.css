@@ -207,7 +207,8 @@ td {
 .task4 section {
   padding: 0px 5px;
 }
-.task4 tbody td:first-child {
+.task4 tbody td:first-child,
+.task4 thead tr td {
   color: #555;
   background-color: #ccc;
 }
