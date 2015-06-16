@@ -39,7 +39,7 @@ button {
   -ms-user-select: none;
   user-select: none;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   color: #333;
   background-color: #ffffff;
@@ -57,8 +57,8 @@ nav button {
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover,
-.open > .dropdown-toggle.btn-primary {
-  color: #fff;
+.open  > .dropdown-toggle.btn-primary {
+  color: #ffffff;
   background-color: #286090;
   border-color: #204d74;
 }
@@ -68,11 +68,11 @@ nav button {
   line-height: 1.5;
   border-radius: 3px;
 }
-nav > button:hover,
-nav > button:focus,
-nav > button.focus,
-nav > button:active,
-nav > button.active {
+nav  > button:hover,
+nav  > button:focus,
+nav  > button.focus,
+nav  > button:active,
+nav  > button.active {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
@@ -85,7 +85,7 @@ table {
 th,
 td {
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid #000;
 }
 .message {
   padding: 50px;
@@ -116,6 +116,9 @@ ul.pagination > li {
   padding: 10px;
   text-align: center;
 }
+.ng-table-pager a {
+  color: #555;
+}
 .ng-table-counts {
   position: relative;
   display: inline-block;
@@ -140,9 +143,6 @@ ul.pagination > li {
 .input-filter {
   padding: 0px 5px;
 }
-.ng-table-pager a {
-  color: #555;
-}
 /* Task 2 */
 .task2 section {
   padding: 0px 10px;
@@ -155,13 +155,19 @@ ul.pagination > li {
   text-decoration: line-through;
 }
 .data_set {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
 }
 .data_set > div {
   min-height: 25px;
   margin: 10px 0px;
+}
+.data_set .first_column {
+  width: 100px;
+}
+.data_set .second_column {
+  width: 190px;
 }
 .data_set .first_column,
 .data_set .second_column {
@@ -173,12 +179,6 @@ ul.pagination > li {
 .data_set span.first_column,
 .data_set span.second_column {
   padding: 2px;
-}
-.data_set .first_column {
-  width: 100px;
-}
-.data_set .second_column {
-  width: 190px;
 }
 .data_set input.first_column,
 .data_set input.second_column {
@@ -194,19 +194,20 @@ header button {
 thead td,
 tbody td:first-child {
   color: #555;
-  background-color: #cccccc;
+  background-color: #ccc;
 }
 thead td:first-child {
   color: #111;
   background-color: #888;
 }
+/* iPhone 5 */
 @media only screen and (max-device-width: 480px) {
   .ng-table-pager {
     width: 175px;
     margin: 0 auto;
   }
-  .data_set > div span,
-  .data_set > div input {
+  .data_set  > div span,
+  .data_set  > div input {
     margin: 3px 0px;
   }
   .data_set .second_column {
