@@ -8,16 +8,23 @@ angular.module('glassbeamApp.task3', ['ui.router', 'ngStorage'])
                 'controller' : 'task3Controller'
             });
     }])
-    .controller('task3Controller', ['$scope', 'api', '$stateParams', '$state', '$localStorage', function ($scope, api, $stateParams, $state, $localStorage) {
+    .controller('task3Controller', ['$scope', '$sessionStorage', function ($scope, $sessionStorage) {
         $scope.data_set = [
             { 'name' : 'Gulfaraz', 'description': 'Awesome Guy' },
             { 'name' : 'Thamina', 'description': 'Awesome Gal' },
             { 'name' : 'Mohsin', 'description': 'Not so awesome Guy' }
         ];
-        if($localStorage.data_set && $localStorage.data_set.length > 0) {
-            $scope.data_set = $localStorage.data_set;
+        if($sessionStorage.data_set && $sessionStorage.data_set.length > 0) {
+            $scope.data_set = $sessionStorage.data_set;
         }
         $scope.save = function () {
-            $localStorage.data_set = $scope.data_set;
+            $sessionStorage.data_set = $scope.data_set = $scope.data_set.filter(function (item) {
+                if(!item.delete) {
+                    delete item.delete;
+                    return true;
+                } else {
+                    return false;
+                }
+            });
         };
     }]);

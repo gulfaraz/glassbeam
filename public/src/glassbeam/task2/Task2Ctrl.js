@@ -4,9 +4,6 @@ angular.module('glassbeamApp.task2', ['ui.router'])
             .state('task2', {
                 'url' : '/task2',
                 'params' : {},
-                'templateUrl' : 'src/glassbeam/task2/task2.html',
-                'controller' : 'task2Controller'
+                'templateUrl' : 'src/glassbeam/task2/task2.html'
             });
-    }])
-    .controller('task2Controller', ['$scope', 'api', '$stateParams', '$state', function ($scope, api, $stateParams, $state) {
     }]);

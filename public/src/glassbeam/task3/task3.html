@@ -1,24 +1,29 @@
-<section>
+<section class="task3">
     <header><h2>Task 3</h2></header>
     <section>
         <header><h3>Data Set</h3></header>
         <div class="data_set">
-            <div ng-repeat="record in data_set" ng-mouseover="record.show_controls = true" ng-mouseleave="record.show_controls = false">
-                <span ng-hide="record.edit">
-                    <span ng-init="record.original.name=record.name">{{record.name}}</span>
-                    <span ng-init="record.original.description=record.description">{{record.description}}</span>
+            <div ng-if="data_set.length > 0" ng-repeat="record in data_set" ng-mouseover="show_controls = true" ng-mouseleave="show_controls = false">
+                <span ng-hide="edit">
+                    <span class="first_column" ng-class="{strike:record.delete}" ng-init="original.name=record.name">{{record.name}}</span>
+                    <span class="second_column" ng-class="{strike:record.delete}" ng-init="original.description=record.description">{{record.description}}</span>
                 </span>
-                <span ng-show="record.edit">
-                    <input type="text" ng-model="record.name" value="{{record.name}}" />
-                    <input type="text" ng-model="record.description" value="{{record.description}}" />
+                <span ng-show="edit">
+                    <input class="first_column" type="text" ng-model="record.name" value="{{record.name}}" />
+                    <input class="second_column" type="text" ng-model="record.description" value="{{record.description}}" />
                 </span>
-                <span ng-show="record.show_controls">
-                    <button type="button" ng-click="record.edit = !record.edit">{{ record.edit ? 'Done' : 'Edit'}}</button>
-                    <button type="button" ng-click="$parent.data_set[$index]=record.original">Undo</button>
-                    <button type="button" ng-click="$parent.data_set.splice($index, 1)">Delete</button>
+                <span class="controls" ng-show="show_controls || edit">
+                    <button type="button" class="btn-xs" ng-click="edit = !edit">{{ edit ? 'Done' : 'Edit'}}</button>
+                    <button type="button" class="btn-xs" ng-click="$parent.data_set[$index]=original; record.delete = false;">Undo</button>
+                    <button type="button" class="btn-xs" ng-click="record.delete = true">Delete</button>
                 </span>
             </div>
+            <div ng-if="data_set.length <= 0" class="center">No Records</div>
         </div>
-        <button type="button" ng-click="save()">Save</button>
+        <header>
+            <h3>
+                <button type="button" class="btn-primary" ng-click="save()">Save</button>
+            </h3>
+        </header>
     </section>
 </section>

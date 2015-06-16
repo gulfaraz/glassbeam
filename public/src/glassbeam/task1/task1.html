@@ -1,3 +1,12 @@
-<section>
-    Task 1
+<section class="task1">
+    <header><h2>Task 1</h2></header>
+    <section>
+        <table ng-table="table_params" show-filter="true">
+            <tr ng-repeat="data in $data">
+                <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">{{data.name}}</td>
+                <td data-title="'Age'" sortable="'age'">{{data.age}}</td>
+                <td data-title="'Description'" filter="{ 'description': 'text' }">{{data.description}}</td>
+            </tr>
+        </table>
+    </section>
 </section>

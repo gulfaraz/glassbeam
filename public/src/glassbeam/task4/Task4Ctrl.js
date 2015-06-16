@@ -8,14 +8,19 @@ angular.module('glassbeamApp.task4', ['ui.router'])
                 'controller' : 'task4Controller'
             });
     }])
-    .controller('task4Controller', ['$scope', 'api', '$stateParams', '$state', function ($scope, api, $stateParams, $state) {
-        $scope.rows = [{ 'id' : 1, 'name' : 'Row1' }, { 'id' : 2, 'name' : 'Row2' }];
-        $scope.columns = [{ 'id' : 1, 'name' : 'Column1' }, { 'id' : 2, 'name' : 'Column2' }];
+    .controller('task4Controller', ['$scope', function ($scope) {
+        $scope.rows = [{ 'id' : 1, 'name' : 'Row1' }, { 'id' : 2, 'name' : 'Row2' }, { 'id' : 3, 'name' : 'Row3' }];
+        $scope.columns = [{ 'id' : 1, 'name' : 'Column1' }, { 'id' : 2, 'name' : 'Column2' }, { 'id' : 3, 'name' : 'Column3' }];
         $scope.data_set = [
             { 'row_id': 1, 'column_id': 1, 'value': 'Alpha' },
-            { 'row_id': 1, 'column_id': 2, 'value': 'Beta' },
-            { 'row_id': 2, 'column_id': 1, 'value': 'Charlie' },
-            { 'row_id': 2, 'column_id': 2, 'value': 'Delta' }
+            { 'row_id': 1, 'column_id': 2, 'value': 'Bravo' },
+            { 'row_id': 1, 'column_id': 3, 'value': 'Charlie' },
+            { 'row_id': 2, 'column_id': 1, 'value': 'Delta' },
+            { 'row_id': 2, 'column_id': 2, 'value': 'Echo' },
+            { 'row_id': 2, 'column_id': 3, 'value': 'Foxtrot' },
+            { 'row_id': 3, 'column_id': 1, 'value': 'Golf' },
+            { 'row_id': 3, 'column_id': 2, 'value': 'Hotel' },
+            { 'row_id': 3, 'column_id': 3, 'value': 'India' }
         ];
         $scope.orientation = true;
         $scope.transpose_table = function() {
