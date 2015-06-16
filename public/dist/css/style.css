@@ -94,6 +94,9 @@ td {
 .center {
   text-align: center;
 }
+.ng-table th.sortable .sort-indicator:before {
+  border-width: 4px 4px 0;
+}
 /* Task 1 */
 .task1 section {
   padding: 0px 10px;
