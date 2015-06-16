@@ -6,6 +6,9 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
+header button {
+  width: 50%;
+}
 header,
 nav {
   text-align: center;
@@ -114,47 +117,47 @@ td {
   text-align: center;
   width: 50px;
 }
-ul.pagination {
+.task1 ul.pagination {
   list-style: none;
   padding: 0;
 }
-ul.pagination > li {
+.task1 ul.pagination > li {
   display: inline-block;
   height: 30px;
   width: 40px;
 }
-.ng-table-pager {
+.task1 .ng-table-pager {
   padding: 10px;
   text-align: center;
 }
-.ng-table-pager a {
+.task1 .ng-table-pager a {
   color: #555;
 }
-.ng-table-pager li.active a {
+.task1 .ng-table-pager li.active a {
   color: #c9302c;
 }
-.ng-table-counts {
+.task1 .ng-table-counts {
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
-.ng-table-counts > button:first-child {
+.task1 .ng-table-counts > button:first-child {
   margin-left: 0;
 }
-.ng-table-counts > button:first-child:not(:last-child) {
+.task1 .ng-table-counts > button:first-child:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.ng-table-counts > button:not(:first-child):not(:last-child) {
+.task1 .ng-table-counts > button:not(:first-child):not(:last-child) {
   border-radius: 0;
   margin-left: -1px;
 }
-.ng-table-counts > button:last-child:not(:first-child) {
+.task1 .ng-table-counts > button:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin-left: -1px;
 }
-.input-filter {
+.task1 .input-filter {
   padding: 0px 5px;
 }
 /* Task 2 */
@@ -165,52 +168,50 @@ ul.pagination > li {
 .task3 section {
   padding: 0px 5px;
 }
-.strike {
+.task3 .strike {
   text-decoration: line-through;
 }
-.data_set {
+.task3 .data_set {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
 }
-.data_set > div {
+.task3 .data_set > div {
   min-height: 25px;
   margin: 10px 0px;
 }
-.data_set .first_column {
+.task3 .data_set .first_column {
   width: 100px;
 }
-.data_set .second_column {
+.task3 .data_set .second_column {
   width: 190px;
 }
-.data_set .first_column,
-.data_set .second_column {
+.task3 .data_set .first_column,
+.task3 .data_set .second_column {
   height: 100%;
   display: inline-block;
   overflow: auto;
   vertical-align: top;
 }
-.data_set span.first_column,
-.data_set span.second_column {
+.task3 .data_set span.first_column,
+.task3 .data_set span.second_column {
   padding: 2px;
 }
-.data_set input.first_column,
-.data_set input.second_column {
+.task3 .data_set input.first_column,
+.task3 .data_set input.second_column {
+  font-family: inherit;
+  font-size: 100%;
   height: 16px;
 }
 /* Task 4 */
 .task4 section {
   padding: 0px 5px;
 }
-header button {
-  width: 50%;
-}
-thead td,
-tbody td:first-child {
+.task4 tbody td:first-child {
   color: #555;
   background-color: #ccc;
 }
-thead td:first-child {
+.task4 thead td:first-child {
   color: #111;
   background-color: #888;
 }
