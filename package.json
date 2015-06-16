@@ -1,7 +1,7 @@
 {
-  "name": "rms",
-  "version": "0.0.0",
-  "description": "Raid Management System",
+  "name": "glassbeam",
+  "version": "1.0.0",
+  "description": "Glassbeam Assignments",
   "main": "index.js",
   "scripts": {
     "start": "grunt",
