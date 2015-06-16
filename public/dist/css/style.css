@@ -122,6 +122,9 @@ ul.pagination > li {
 .ng-table-pager a {
   color: #555;
 }
+.ng-table-pager li.active a {
+  color: #c9302c;
+}
 .ng-table-counts {
   position: relative;
   display: inline-block;
