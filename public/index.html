@@ -8,7 +8,7 @@
 </head>
 <body ng-app="glassbeamApp">
     <header><h1>Glassbeam</h1></header>
-    <nav><button type="button" ui-sref="task1">Task 1</button><button type="button" ui-sref="task2">Task 2</button><button type="button" ui-sref="task3">Task 3</button><button type="button" ui-sref="task4">Task 4</button></nav>
+    <nav><button type="button" ui-sref="task1" ui-sref-opts="{ 'reload' : true }">Task 1</button><button type="button" ui-sref="task2" ui-sref-opts="{ 'reload' : true }">Task 2</button><button type="button" ui-sref="task3" ui-sref-opts="{ 'reload' : true }">Task 3</button><button type="button" ui-sref="task4" ui-sref-opts="{ 'reload' : true }">Task 4</button></nav>
     <div ui-view><div class="message">Select a Task</div></div>
     <script src="dist/js/glassbeam.min.js"></script>
 </body>
